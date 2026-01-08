@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">My Portfolio</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="https://cdn.oneesports.gg/cdn-data/2022/04/DrStone_AnimeWallpaper.jpg" alt="My Photo" class="profile-img">
+      <div class="about-text">
+        <p>Hello! My name is Anthony Jenrick Apelado. I'm passionate about coding and game development.</p>
+        <h3>Job Qualifications:</h3>
+        <ul>
+          <li>HTML, CSS, and JavaScript</li>
+          <li>Experience with game development frameworks</li>
+          <li>Strong problem-solving and teamwork skills</li>
+          <li>Knowledge of software design principles</li>
+        </ul>
+        <h3>Career Goals:</h3>
+        <p>I aspire to work as a <strong>Game Developer</strong>, creating immersive and engaging experiences for players worldwide.</p>
+
+        <h3>Coding Experience:</h3>
+        <canvas id="skillsChart" width="400" height="300"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Apelado. All rights reserved.</p>
+  </footer>
+
+
+  <script>
+    const ctx = document.getElementById('skillsChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['HTML', 'CSS', 'JavaScript', 'Game Dev Frameworks'],
+        datasets: [{
+          label: 'Skill Level (%)',
+          data: [90, 85, 75, 70],
+          backgroundColor: ['#ff9800', '#ffb74d', '#ffa726', '#fb8c00'],
+          borderRadius: 8 
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            labels: {
+              color: '#fff',
+              font: {
+                size: 14,
+                weight: 'bold'
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#fff',
+              font: {
+                size: 13,
+                weight: '600'
+              }
+            },
+            grid: {
+              color: 'rgba(255,255,255,0.2)'
+            }
+          },
+          y: {
+            ticks: {
+              color: '#fff',
+              font: {
+                size: 13,
+                weight: '600'
+              }
+            },
+            grid: {
+              color: 'rgba(255,255,255,0.2)'
+            },
+            beginAtZero: true,
+            max: 100
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
