@@ -62,7 +62,7 @@ nav {
   color: #ff9800;
 }
 
-/* Hero section now sits on top of full-page background */
+
 .hero {
   text-align: center;
   padding: 120px 20px;
@@ -334,3 +334,4 @@ footer p {
 .social-links a:hover {
   text-decoration: underline;
 }
+
